@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg0vswormdink"]
+
+[ext_resource type="Texture2D" uid="uid://c80r27pbn27fo" path="res://assets/world_tileset.png" id="1_mi6dp"]
+[ext_resource type="Script" uid="uid://cpxporxecbgmb" path="res://scripts/button.gd" id="1_rhj8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi6dp"]
+size = Vector2(14, 12)
+
+[node name="Button" type="RigidBody2D"]
+script = ExtResource("1_rhj8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mi6dp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_mi6dp")
+region_enabled = true
+region_rect = Rect2(81, 117, 14, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_mi6dp")
